@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doraemon World - Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; display: flex; justify-content: center; padding: 15px; }
+        .container { width: 100%; max-width: 480px; }
+        
+        .header { text-align: center; margin-bottom: 20px; }
+        .header-top { font-size: 11px; color: #007bff; font-weight: bold; letter-spacing: 1px; margin-bottom: 5px; }
+        .header h1 { font-size: 20px; color: #0056b3; font-style: italic; }
+        .header p { font-size: 11px; color: #666; font-style: italic; margin-top: 2px; }
+
+        .search-box { position: relative; margin-bottom: 15px; }
+        .search-box i { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #888; font-size: 13px; }
+        .search-box input { width: 100%; padding: 12px 15px 12px 40px; background: #fff; border: 1px solid #ddd; border-radius: 25px; outline: none; font-size: 13px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+
+        .alert-banner { background: #fff8e1; border: 1px solid #ffe0b2; padding: 10px 15px; border-radius: 10px; font-size: 11px; color: #8d6e63; display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; }
+        .alert-banner i { color: #ffa000; margin-right: 8px; }
+
+        .list-container { display: flex; flex-direction: column; gap: 10px; }
+        .card { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 12px 15px; display: flex; align-items: center; text-decoration: none; color: inherit; box-shadow: 0 1px 3px rgba(0,0,0,0.03); transition: 0.2s; }
+        .card:hover { border-color: #007bff; }
+        
+        .card-icon { width: 38px; height: 38px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #1976d2; font-size: 16px; margin-right: 12px; flex-shrink: 0; }
+        .folder-icon { background: #fff9c4; color: #fbc02d; }
+
+        .card-info { flex-grow: 1; }
+        .card-info strong { display: block; font-size: 13px; color: #222; }
+        .card-type { font-size: 9px; font-weight: bold; letter-spacing: 0.5px; margin-top: 2px; display: inline-block; }
+        .type-course { color: #007bff; }
+        .type-folder { color: #f57c00; }
+
+        .arrow { color: #bbb; font-size: 11px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="header-top">FINAL • HELP • BY DOREAMON 💙</div>
+            <h1>Doraemon World</h1>
+            <p>Time Machine Revived</p>
+        </div>
+
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search courses..." onkeyup="searchContent()">
+        </div>
+
+        <div class="alert-banner">
+            <div><i class="fa-solid fa-circle-info"></i> Click folders to explore or courses to view content</div>
+        </div>
+
+        <div class="list-container" id="contentList">
+            <a href="#" class="card">
+                <div class="card-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                <div class="card-info">
+                    <strong>Selection Way</strong>
+                    <span class="card-type type-course">COURSE</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
